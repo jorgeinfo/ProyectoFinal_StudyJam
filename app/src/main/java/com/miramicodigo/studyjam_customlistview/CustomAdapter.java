@@ -12,17 +12,11 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-/**
- * @author Gustavo Lizarraga
- * @version 1.1
- * @date 16/12/2016 - Modified: 19/12/2016
- * #DevStudyJam
- * */
 
 public class CustomAdapter extends BaseAdapter {
 
     private Context context;
-    private ArrayList<Pokemon> items;
+    private ArrayList<Horoscopo> items;
 
     public CustomAdapter(Activity activity, ArrayList data) {
         this.context = activity;
@@ -63,7 +57,7 @@ public class CustomAdapter extends BaseAdapter {
         viewHolder.itemNombre.setTypeface(tf_bold);
         viewHolder.itemTipo.setTypeface(tf_thing);
 
-        Pokemon currentItem = (Pokemon) getItem(position);
+        Horoscopo currentItem = (Horoscopo) getItem(position);
         viewHolder.itemNombre.setText(currentItem.getNombre());
         viewHolder.itemTipo.setText(currentItem.getHabilidades());
         viewHolder.itemImagen.setImageResource(currentItem.getImagen());

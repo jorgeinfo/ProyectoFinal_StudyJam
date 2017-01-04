@@ -1,6 +1,7 @@
 package com.miramicodigo.studyjam_customlistview;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.animation.Animation;
@@ -9,15 +10,11 @@ import android.widget.ImageView;
 
 public class SplashscreenActivity extends AppCompatActivity {
 
-    /**
-     * @author Gustavo Lizarraga
-     * @version 1.1
-     * @date 16/12/2016 - Modified: 19/12/2016
-     * #DevStudyJam
-     * */
 
     private ImageView ivLogo;
     private Animation animacion;
+    private MediaPlayer mediaPlayer;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +29,17 @@ public class SplashscreenActivity extends AppCompatActivity {
         animacion.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
+                initMediaPlayer();
 
+                mediaPlayer.start();
+
+
+
+            }
+            public void initMediaPlayer() {
+                mediaPlayer = MediaPlayer.create(
+                        getApplicationContext(),
+                        R.raw.hevynavidad);
             }
 
             @Override

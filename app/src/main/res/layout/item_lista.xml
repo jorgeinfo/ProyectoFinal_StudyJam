@@ -38,7 +38,7 @@
             android:layout_weight="1"
             android:text="Subtitulo"
             android:textSize="20sp"
-            android:textColor="#6c6a6a"
+            android:textColor="@color/Blanco"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"/>
     </LinearLayout>
